@@ -1,0 +1,16 @@
+@import '../src/components/styles/sass/variables';
+
+.App {
+    text-align: center;
+    font-family:'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    > div {
+        &:nth-child(n){
+            background-color: $bgSecondColor;
+        }
+        &:nth-child(2n){
+            background-color: $bgColor;
+        }
+    }
+}
+

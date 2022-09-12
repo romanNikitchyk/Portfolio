@@ -1,0 +1,13 @@
+@import '../components/styles/sass/variables';
+
+.nav {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        text-decoration:none;
+        font-family: $miniTitleFont;
+        color: $miniTitle;
+    }
+}

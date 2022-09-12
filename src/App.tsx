@@ -1,26 +1,27 @@
 import React from 'react';
-
-import './App.css';
-import Header from "./header/Header";
-import Main from "./1/Main";
-import Skills from "./2/Skills";
-import MyWorks from "./3/MyWorks";
-import DistansWork from "./4/DistansWork";
-import Contacts from "./5/Contacts";
-import Footer from "./footer/Footer";
+import Main from "./2main/Main";
+import Skills from "./3skills/Skills";
+import Projects from "./4projects/Projects";
+import DistansWork from "./5distaceWork/DistansWork";
+import Contacts from "./6contacts/Contacts";
+import Footer from "./8footer/Footer";
+import Header from "./1header/Header";
+import style from './App.module.scss'
+import Links from "./7links/Links";
 
 function App() {
-    return (
-        <div className="App">
-            <Header/>
-            <Main/>
-            <Skills/>
-            <MyWorks/>
-            <DistansWork/>
-            <Contacts/>
-            <Footer/>
-        </div>
-    );
+  return (
+    <div className={style.App}>
+      <Header/>
+      <Main/>
+      <Skills/>
+      <Projects/>
+      <DistansWork/>
+      <Contacts/>
+      <Links/>
+      <Footer/>
+    </div>
+  );
 }
 
 export default App;
