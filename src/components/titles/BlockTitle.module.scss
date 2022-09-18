@@ -1,0 +1,29 @@
+@import '../styles/sass/variables';
+
+.title {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 1px;
+
+  .text {
+    font-family: $blockTitleFont;
+    color: $titlesColor;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: normal;
+
+    &::after {
+      width: 40vh;
+      bottom: 17px;
+      content: "";
+      height: 2px;
+      background: $primaryColor;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+}
+

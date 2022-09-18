@@ -1,0 +1,98 @@
+@import '../components/styles/sass/variables';
+
+.contactsBlock {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 80%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .myContacts {
+      display: flex;
+      flex-direction: row;
+      font-family: $textFont;
+      color: $textColor;
+      font-size: large;
+
+      .contactPics {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .cPic {
+          height: 24px;
+          width: 24px;
+          margin-right: 20px;
+        }
+      }
+
+      .contactItems {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    .inptBlock {
+      display: flex;
+      justify-content: space-between;
+
+      .inpt {
+        outline: 0;
+        outline-offset: 0;
+        color: #b3b3b3;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 26px;
+        letter-spacing: normal;
+        border: none;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 5px 0;
+        font-family: "Poppins", sans-serif;
+        width: 49%;
+        background-color: transparent
+      }
+    }
+
+    .txtArea {
+      color: #b3b3b3;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 26px;
+      letter-spacing: normal;
+      font-family: "Poppins", sans-serif;
+      max-height: 300px;
+      border: 1px solid #d9d9d9;
+      margin: 40px 0 20px;
+      padding: 11px;
+      width: 95%;
+      height: 100px;
+      resize: none;
+      outline: 0;
+      outline-offset: 0;
+      background-color: transparent
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
