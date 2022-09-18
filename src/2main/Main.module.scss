@@ -1,10 +1,9 @@
 @import './../components/styles/sass/variables';
 
 .mainBlock {
-  min-height: 100vh;
-@media (max-width: 768px){
-  min-height: 100%;
-}
+  padding-top: 80px;
+  padding-bottom: 80px;
+
   .container {
     width: 80%;
     height: 100%;
@@ -13,36 +12,35 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
-    min-height: 90vh;
+
+    @media (max-width: 666px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
     .text {
-      width: 50%;
       text-align: left;
       font-size: large;
       font-family: $blockTitleFont;
       color: $titlesColor;
-
     }
 
     .photoBlock {
-      width: 500px;
-      display: flex;
-      flex-direction: column;
-      height: 600px;
+      width: 50%;
+      @media (max-width: 666px) {
+        width: 100%;
+      }
 
       .photo {
         height: 100%;
         width: 100%;
-        max-width: 720px;
-      }
-      @media (max-width: 700px){
-        width:250px;
-        height: 300px;
+        box-shadow: 0 0 20px 7px gray;
       }
     }
   }
 }
+
 
 
 

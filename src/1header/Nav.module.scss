@@ -1,13 +1,30 @@
 @import '../components/styles/sass/variables';
 
 .nav {
-    width: 300px;
+  display: flex;
+  justify-content: flex-end;
+  @media (max-width: 400px) {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
-    a {
-        text-decoration:none;
-        font-family: $miniTitleFont;
-        color: $miniTitle;
-    }
+  a {
+    padding: 10px;
+    text-decoration: none;
+    font-family: $miniTitleFont;
+    color: $miniTitle;
+  }
+
+  &:hover {
+    color: $primaryColor;
+  }
+
+  .active {
+    color: $primaryColor;
+  }
+}
+
+.link {
+  cursor: pointer;
 }
