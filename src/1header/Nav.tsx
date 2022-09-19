@@ -26,7 +26,7 @@ function Nav() {
           smooth={true}
           offset={1}
           duration={1000}
-        >Skils</Link>
+        >Skills</Link>
         <Link
           href={''} // отавляем пустую строку для нормального поведения,
           className={style.link}
