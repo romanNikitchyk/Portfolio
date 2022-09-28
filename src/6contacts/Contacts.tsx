@@ -15,7 +15,7 @@ type FormDataType = {
 }
 
 function Contacts() {
-  const {register, formState: {errors}, reset, handleSubmit} = useForm<FormDataType>()
+  const {register, formState: {errors, isValid}, reset, handleSubmit} = useForm<FormDataType>()
   const onSubmitHandler = (data: FormDataType) => {
     sendMessage(JSON.stringify(data))
     reset()
@@ -73,13 +73,16 @@ function Contacts() {
           <form className={style.form} onSubmit={handleSubmit(onSubmitHandler)}>
             <div className={style.inptBlock}>
               <input className={style.inpt} type="text"
-                     placeholder={"Your Name"} {...register('Name', {required: true})} />
+                     placeholder={"Your Name"} {...register('Name', {required: 'Name is required'})} />
+              {errors?.Name && <p>{errors?.Name.message || 'Error'}</p>}
               <input className={style.inpt} type="email"
-                     placeholder={"Your Email"} {...register('Email', {required: true})}/>
+                     placeholder={"Your Email"} {...register('Email', {required: 'Email is required'})}/>
+
             </div>
             <textarea className={style.txtArea}
                       placeholder={"Your Message"} {...register('TextArea', {required: true})}></textarea>
-            <Button type={'submit'} className={style.button} variant="contained" color={"inherit"}>SEND</Button>
+
+            <Button type={'submit'} className={style.button} variant="contained" color={"inherit"} disabled={isValid}>SEND</Button>
           </form>
         </div>
       </div>
