@@ -4,9 +4,9 @@ import Skill from "./skill/Skill";
 import BlockTitle from "../components/titles/BlockTitle";
 import develop from "../assets/images/development.png";
 import progr from "../assets/images/programming.png";
-import t from "../assets/images/test.png";
+import test from "../assets/images/test.png";
 import des from "../assets/images/design.png";
-
+import languages from "../assets/images/languages.png"
 function Skills() {
   const development = {
     backgroundImage: `url(${develop})`,
@@ -15,10 +15,13 @@ function Skills() {
     backgroundImage: `url(${progr})`,
   }
   const testing = {
-    backgroundImage: `url(${t})`,
+    backgroundImage: `url(${test})`,
   }
   const design = {
     backgroundImage: `url(${des})`,
+  }
+  const language = {
+    backgroundImage: `url(${languages})`
   }
   return (
     <div className={style.skillsBlock} id={"2"}>
@@ -31,6 +34,8 @@ function Skills() {
                  discription={"JavaScript, TypeScript, HTML5, CSS3, English - Intermediate , Polish - Intermediate  "}/>
           <Skill style={testing} title={"Testing"} discription={"Unit Tests, Storybook"}/>
           <Skill style={design} title={"Design"} discription={"Material UI etc"}/>
+          <Skill style={language} title={"Languages"}
+                 discription={"English-intermediate, Polish-intermediate, Russian-native"}/>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import pin from "../assets/images/gps.png";
 import Contact from "./contact/Contact";
 import {Button} from "@mui/material";
 import {useForm} from "react-hook-form";
+import ErrorSnackbar from "../components/SnackBar/SnackBar";
 
 type FormDataType = {
   Name: string
@@ -15,7 +16,10 @@ type FormDataType = {
 }
 
 function Contacts() {
-  const {register, formState: {errors, isValid}, reset, handleSubmit} = useForm<FormDataType>()
+  const {register, formState: {errors, isValid}, reset, handleSubmit} = useForm<FormDataType>({
+    mode: "onTouched"
+  })
+  console.log({errors, isValid})
   const onSubmitHandler = (data: FormDataType) => {
     sendMessage(JSON.stringify(data))
     reset()
@@ -73,17 +77,36 @@ function Contacts() {
           <form className={style.form} onSubmit={handleSubmit(onSubmitHandler)}>
             <div className={style.inptBlock}>
               <input className={style.inpt} type="text"
-                     placeholder={"Your Name"} {...register('Name', {required: 'Name is required'})} />
-              {errors?.Name && <p>{errors?.Name.message || 'Error'}</p>}
+                     placeholder={"Your Name"} {...register('Name', {
+                required: "NAME IS REQUIRED",
+                minLength: {
+                  value: 2,
+                  message: "MIN 2 CHARACTERS"
+                }
+              })} />
+
               <input className={style.inpt} type="email"
-                     placeholder={"Your Email"} {...register('Email', {required: 'Email is required'})}/>
+                     placeholder={"Your Email"} {...register('Email', {
+                required: "EMAIL IS REQUIRED",
+                pattern: {
+                  value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: "INVALID EMAIL ADDRESS"
+                }
+              })}/>
 
             </div>
             <textarea className={style.txtArea}
-                      placeholder={"Your Message"} {...register('TextArea', {required: true})}></textarea>
+                      placeholder={"Your Message"} {...register('TextArea', {
+              required: "MESSAGE REQUIRED TOO",
+              minLength: 3
+            })}></textarea>
 
-            <Button type={'submit'} className={style.button} variant="contained" color={"inherit"} disabled={isValid}>SEND</Button>
+            <Button type={'submit'} className={style.button} variant="contained" color={"inherit"}
+                    disabled={!isValid}>SEND</Button>
           </form>
+          {errors.Name?.message && <ErrorSnackbar message={errors.Name.message} />}
+          {errors.Email?.message && <ErrorSnackbar message={errors.Email.message} />}
+          {errors.TextArea?.message && <ErrorSnackbar message={errors.TextArea.message} />}
         </div>
       </div>
     </div>

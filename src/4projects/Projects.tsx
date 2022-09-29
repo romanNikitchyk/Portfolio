@@ -22,12 +22,11 @@ function Projects() {
         <BlockTitle text={"Projects"}/>
         <div className={style.myWorks}>
           <Project link={'https://www.youtube.com/'} style={social} title={"social network"}
-                   discription={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.."}/>
-          <Project link={'https://www.youtube.com/'} style={todoList} title={"To do list"}
-                   discription={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.."}/>
-          <Project link={'https://www.youtube.com/'} style={counter} title={"counter"}
-                   discription={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.."}/>
-
+                   discription={"Social network: research project, sharpening skills"}/>
+          <Project link={'https://sssromaz.github.io/todoList-React-Redux'} style={todoList} title={"To do list"}
+                   discription={"To do list for every day on the week"}/>
+          <Project link={'https://sssromaz.github.io/Counter'} style={counter} title={"counter"}
+                   discription={"My first study project"}/>
         </div>
       </div>
     </div>
