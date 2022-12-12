@@ -29,11 +29,11 @@ export const Skills = () => {
       <div className={style.container}>
         <div className={style.skills}>
           <Skill style={development} title={"Development"}
-                 discription={"React, Redux/Redux Toolkit, AXIOS, React-Hook-Form, Formik etc"}/>
+                 discription={"React, Redux/Redux Toolkit, Redux Thunk, AXIOS, REST API, Thunk, React HOOKs/HOCs, Formik etc"}/>
           <Skill style={foundation} title={"Foundation"}
                  discription={"JavaScript, TypeScript, HTML5, CSS3"}/>
-          <Skill style={testing} title={"Testing"} discription={"Unit Tests, Storybook"}/>
-          <Skill style={design} title={"Design"} discription={"Material UI etc"}/>
+          <Skill style={testing} title={"Testing"} discription={"Unit Tests, Jest, Storybook"}/>
+          <Skill style={design} title={"Design"} discription={"Material UI, Figma etc"}/>
           <Skill style={language} title={"Languages"}
                  discription={"English-intermediate, Polish-intermediate, Russian-native"}/>
         </div>
