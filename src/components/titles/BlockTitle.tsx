@@ -6,7 +6,7 @@ type TitlePropsType = {
   text: string
 }
 
-const BlockTitle = (props: TitlePropsType) => {
+export const BlockTitle = (props: TitlePropsType) => {
   return (
     <Bounce>
       <div className={style.title}>
@@ -16,4 +16,3 @@ const BlockTitle = (props: TitlePropsType) => {
   );
 };
 
-export default BlockTitle;

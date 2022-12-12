@@ -4,7 +4,7 @@ import style from "./MiniTitle.module.scss"
 type MiniTitlePropsType = {
   title: string
 }
-const MiniTitle = (props: MiniTitlePropsType) => {
+export const MiniTitle = (props: MiniTitlePropsType) => {
   return (
     <div className={style.miniTitle}>
       <h3>{props.title}</h3>
@@ -12,4 +12,3 @@ const MiniTitle = (props: MiniTitlePropsType) => {
   );
 };
 
-export default MiniTitle;

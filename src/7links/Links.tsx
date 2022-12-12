@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './Links.module.scss'
-import BlockTitle from "../components/titles/BlockTitle";
+import {BlockTitle} from "../components/titles/BlockTitle";
 
-const Links = () => {
+export const Links = () => {
   return (
     <div className={style.container} id={"5"}>
       <BlockTitle text={"Roman Nikitchyk"}/>
@@ -16,4 +16,3 @@ const Links = () => {
   );
 };
 
-export default Links;

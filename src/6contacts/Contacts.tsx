@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./Contacts.module.scss"
-import BlockTitle from "../components/titles/BlockTitle";
+import {BlockTitle} from "../components/titles/BlockTitle";
 import pho from "../assets/images/phone-call.png";
 import mail from "../assets/images/email.png";
 import pin from "../assets/images/gps.png";
-import Contact from "./contact/Contact";
+import {Contact} from "./contact/Contact";
 import {Button} from "@mui/material";
 import {useForm} from "react-hook-form";
 import ErrorSnackbar from "../components/SnackBar/SnackBar";
@@ -15,11 +15,10 @@ type FormDataType = {
   TextArea: string
 }
 
-function Contacts() {
+export const Contacts = () => {
   const {register, formState: {errors, isValid}, reset, handleSubmit} = useForm<FormDataType>({
     mode: "onTouched"
   })
-  console.log({errors, isValid})
   const onSubmitHandler = (data: FormDataType) => {
     sendMessage(JSON.stringify(data))
     reset()
@@ -111,6 +110,5 @@ function Contacts() {
       </div>
     </div>
   );
-}
+};
 
-export default Contacts;

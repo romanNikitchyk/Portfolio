@@ -4,7 +4,7 @@ type ContactPropsType = {
   title: string
 }
 
-const Contact = (props: ContactPropsType) => {
+export const Contact = (props: ContactPropsType) => {
   return (
     <div>
       <span>{props.title}</span>
@@ -12,4 +12,3 @@ const Contact = (props: ContactPropsType) => {
   );
 };
 
-export default Contact;
