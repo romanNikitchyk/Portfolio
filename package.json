@@ -2,7 +2,7 @@
   "name": "my-cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sssromaz.github.io/Portfolio",
+  "homepage": "https://romanNikitchyk.github.io/Portfolio",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",

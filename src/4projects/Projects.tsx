@@ -25,13 +25,13 @@ export const Projects = () => {
       <div className={style.container}>
         <BlockTitle text={"Projects"}/>
         <div className={style.myWorks}>
-          <Project link={'https://sssromaz.github.io/Cards'} style={cardsGame} title={"cards Game"}
+          <Project link={'https://romanNikitchyk.github.io/Cards'} style={cardsGame} title={"cards Game"}
                    discription={"Cards with questions to which you must know the answer"}/>
-          <Project link={'https://sssromaz.github.io/todoList-React-Redux'} style={todoList} title={"To do list"}
+          <Project link={'https://romanNikitchyk.github.io/todoList-React-Redux'} style={todoList} title={"To do list"}
                    discription={"To do list for every day on the week"}/>
-          <Project link={'https://sssromaz.github.io/Counter'} style={counter} title={"counter"}
+          <Project link={'https://romanNikitchyk.github.io/Counter'} style={counter} title={"counter"}
                    discription={"My first study project"}/>
-          <Project link={'https://sssromaz.github.io/HW_Ignat'} style={tasks} title={"React tasks"}
+          <Project link={'https://romanNikitchyk.github.io/HW_Ignat'} style={tasks} title={"React tasks"}
                    discription={"Tasks from my teacher"}/>
         </div>
       </div>
